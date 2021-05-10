@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Sigma IT Corp</title>
+<th:block th:include="fragments/common.html :: headerfiles">
+</th:block>
+<style>
+.no-access {
+	max-width: 800px;
+	margin: auto;
+	margin-top: 15px;
+	padding: 15px;
+}
+
+.image-div {
+	margin-bottom: 10px;
+}
+</style>
+</head>
+<body>
+	<header th:insert="fragments/common.html :: header"> </header>
+	<div class="jumbotron no-access text-center">
+		<div class="image-div">
+			<img th:src="@{../images/padlock_128.png}">
+		</div>
+		<h4>You do not have permission to view this page at the moment.</h4>
+		<p class="lead">Hit the Home button</p>
+		<p>
+			<a role="button" class="btn btn-primary btn-sm" th:href="@{/home}">Home
+			</a>
+		</p>
+	</div>
+</body>
+</html>

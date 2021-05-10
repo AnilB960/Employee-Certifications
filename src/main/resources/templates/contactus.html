@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <title>About</title>
+      <th:block th:include="fragments/common.html :: headerfiles">
+      </th:block>
+      <link rel="stylesheet" th:href="@{../css/contactus.css}">
+   </head>
+   <body>
+      <header th:insert="fragments/common.html :: header"> </header>
+      <div class="container">
+         <div class="row">
+            <div class="col">
+               <nav aria-label="breadcrumb" class="margin">
+                  <ol class="breadcrumb">
+                     <li class="breadcrumb-item heading">We'd Love To Hear From You</li>
+                  </ol>
+               </nav>
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col cell-wrapper layout-widget-wrapper">
+               <span id="hs_cos_wrapper_left_column" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text">
+                  <h2>Choice Screening strives to provide the best service possible with every contact!&nbsp;</h2>
+                  <p>We operate in an industry built on trust. This can only be achieved through communication and experienced support from the first contact past your ten-year anniversary.</p>
+                  <h4>At Choice you always talk to a human!</h4>
+                  <p>Have questions about background screening? Our entire team receives specialized&nbsp;training regularly to ensure you're receiving the best information possible. From basic questions to complex compliance inquiries, we're here to help!</p>
+                  <p>Interested in learning more about our services? Our Account Executives&nbsp;take the time to discuss your existing background screening program and help you make smart decisions that&nbsp;best meet your needs.&nbsp;</p>
+               </span>
+            </div>
+            <div class="col-12 col-sm-4">
+               <div class="card bg-light mb-3">
+                  <div class="card-header bg-success text-white text-uppercase"><i class="fa fa-home"></i> Address</div>
+                  <div class="card-body">
+                     <p>930 Kehrs Mill Rd.</p>
+                     <p>Suite 314,</p>
+                     <p>Ballwin - MO 63011</p>
+                     <p><Strong>Email:</Strong> info@sigmaitcorp.com</p>
+                     <p><Strong>Tel.</Strong> +1-636-224-4209</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div th:insert="fragments/common.html :: footerfiles"> </div>
+   </body>
+</html>

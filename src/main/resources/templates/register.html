@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <title>Register</title>
+      <th:block th:include="fragments/common.html :: headerfiles">
+      </th:block>
+      <link rel="stylesheet" type="text/css" th:href="@{../css/login.css}">
+   </head>
+   <body>
+      <div class="logreg-forms register-div">
+         <form th:object="${newEmp}" th:action="@{/register}" class="form-signup" method="POST">
+            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"><strong>Sign Up</strong></h1>
+            <div th:if="${errorRegister}" class="alert alert-danger" role="alert">[[${errorRegister}]]</div>
+            <div class="form-group row">
+               <div class="col-sm-6">
+               	<label for="firstname">First Name</label>
+                  <input id="firstname" type="text" name="firstName" th:field="*{firstName}" class="form-control" placeholder="First Name" required autofocus="" autocomplete="off">
+               </div>
+               <div class="col-sm-6">
+               <label for="lastname">Last Name</label>
+                  <input id="lastname" type="text" name="lastName" th:field="*{lastName}" class="form-control" placeholder="Last Name" required autofocus="" autocomplete="off">
+               </div>
+            </div>
+            <div class="form-group row">
+               <div class="col-sm-6">
+               	<label for="password">Password</label>
+                  <input id="password" type="password" name="password" th:field="*{password}" class="form-control" placeholder="Password" required autofocus="" autocomplete="off">
+               </div>
+               <div class="col-sm-6">
+               <label for="matchingPassword">Confirm Password</label>
+                  <input id="matchingPassword" type="password" name="matchingPassword" th:field="*{matchingPassword}" class="form-control" placeholder="Re-Enter Password" required autofocus="" autocomplete="off">
+               </div>
+            </div>
+            <div class="form-group row">
+               <div class="col-sm-6">
+               	<label for="username">Username</label>
+                  <input id="username" type="text" name="username" th:field="*{username}" class="form-control" placeholder="Username" required autofocus="" autocomplete="off">
+               </div>
+               <div class="col-sm-6">
+               <label for="dateofjoin">Date of Join</label>
+                  <input id="dateofjoin" type="date" name="dateofjoin" th:field="*{dateofjoin}" class="form-control" placeholder="Date of Join" required autofocus="" autocomplete="off">
+               </div>
+            </div>
+            <div class="form-group row">
+               <div class="col-sm-6">
+               <label for="location">Location</label>
+                  <input id="location" type=text name="location" th:field="*{location}" class="form-control" placeholder="Location (City)" required autofocus="" autocomplete="off">
+               </div>
+               <div class="col-sm-3">
+                  <p>Gender</p>
+                  <div th:each="g : ${genderTypes}">
+                     <input type="radio" th:field="*{gender}" th:value="${g}" />
+                     <label th:for="${#ids.prev('gender')}" th:text="${g}">Gender</label>
+                  </div>
+               </div>
+               <div class="col-sm-3">
+                  <p>Experienced?</p>
+                  <div th:each="exp : ${experienced}">
+                     <input type="radio" th:field="*{experienced}" th:value="${exp}" />
+                     <label th:for="${#ids.prev('experienced')}" th:text="${exp}">Experienced</label>
+                  </div>
+               </div>
+            </div>
+            <div class="buttons">
+               <button class="btn btn-danger" type="reset"><i class="fa fa-undo"></i> Reset</button>
+               <button class="btn btn-primary" type="submit"><i class="fa fa-user"></i> Sign Up</button>
+            </div>
+            <!--<a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>-->
+         </form>
+      </div>
+   </body>
+</html>

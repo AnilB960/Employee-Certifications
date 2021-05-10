@@ -1,0 +1,24 @@
+
+/* Footer */
+.footer {
+    position: relative;
+    background-color: #fff;
+    color: #707070;
+    padding: 55px 0 40px;
+}
+
+/*footer bottom */
+.footer-bottom {
+    padding-top: 5px;
+    padding-bottom: 15px;
+    border-top: 1px solid rgba(0,0,0,0.09);
+    background: #fff;
+    
+}
+
+.copyright-text p {
+    color: #707070;
+    margin-top: 18px;
+    margin-bottom: 0;
+    font-size:12px;
+}

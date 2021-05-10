@@ -1,0 +1,43 @@
+.home {
+	max-width: 850px;
+	margin: auto;
+	margin-top: 15px;
+	padding: 15px;
+	-webkit-box-shadow: 1px 22px 300px 107px rgba(79,79,78,1);
+-moz-box-shadow: 1px 22px 300px 107px rgba(79,79,78,1);
+box-shadow: 1px 22px 300px 107px rgba(79,79,78,1);
+}
+
+.image-div {
+	margin-bottom: 15px;
+}
+
+.image-div,
+.buttons-div {
+	text-align: center;
+}
+
+.image-div img {
+	width: 250px;
+	border-radius: 50%;
+	box-shadow: 0 6px 10px 0 rgba(138, 143, 191), 0 1px 18px 0 
+	rgba(138, 143, 191), 0 3px 5px -1px rgba(138, 143, 191);
+}
+
+.emp-alert {
+	width: 850px;
+	margin: auto;
+	margin-top: 15px;
+}
+
+.report-button {
+	margin-top: 16px;
+}
+
+.enroll-button {
+	margin-top: 15px;
+}
+
+.not-enrolled {
+	font-size: 16px;
+}

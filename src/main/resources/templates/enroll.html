@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <title>Sigma IT Corp</title>
+      <th:block th:include="fragments/common.html :: headerfiles">
+      </th:block>
+      <link rel="stylesheet" th:href="@{../css/enroll.css}">
+   </head>
+   <body>
+      <header th:insert="fragments/common.html :: header"> </header>
+      <div class="container register-form">
+         <div class="form">
+            <div class="note">
+               <p>Enroll to New AWS Certification</p>
+            </div>
+            <form method="POST" th:object="${enroll}" th:action="@{/enroll}">
+               <div class="form-content">
+                  <div class="row">
+                     <div class="col-md-6">
+                        <div class="form-group">
+                           <select th:field="*{certificationname}" class="form-control" required>
+                              <option th:each="certificationname : ${allCertifications}" 
+                                 th:value="${certificationname}" 
+                                 th:text="${certificationname}">Certifications Here</option>
+                           </select>
+                        </div>
+                     </div>
+                  </div>
+                  <button name="submit" type="submit" class="btnSubmit">Enroll</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <title>About</title>
+      <th:block th:include="fragments/common.html :: headerfiles">
+      </th:block>
+      <link rel="stylesheet" th:href="@{../css/aboutus.css}">
+   </head>
+   <body>
+   <header th:insert="fragments/common.html :: header"> </header>
+      <div class="image-aboutus-banner">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1 class="lg-text">About Us</h1>
+                  <p class="image-aboutus-para">The Few. The Proud. The Sigma IT-ians</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container paddingTB60">
+         <div class="row">
+            <!-- Blog Post Content Column -->
+            <div class="col-lg-8">
+               <hr>
+               <h2>Good codebase and in-built powerful standards</h2>
+               <hr>
+               <!-- Preview Image -->
+               <img class="img-responsive" src="http://mobilebusinessinsights.com/wp-content/uploads/2016/03/IBM_MobileFirst_SXSWBlog_0321_v2.jpg" alt="">
+               <hr>
+               <!-- Post Content -->
+               <p class="lead">At first glance, all small to top-level consultants may seem similar. Their resumes, presentations and fees don't differ much - but they can be very different to work with. They also have very different track records.</p>
+               <p>We take pride in our philosophy of Organic Growth. The stability of our company is emphasized in our continuous growth and presence throughout the United States as well as our increasing financial success throughout the years.</p>
+               <p>We are a fast growing software consulting company offering software development solutions to businesses all over the world through offshore and onsite services since 1993. In this highly competitive global marketplace with unlimited opportunities, where growth and consolidation brings upon the distinction, our clients face a host of new challenges continuously. We help our client's successfully respond and capitalize on these opportunities by providing professional services, wherever and whenever they're needed. We aim to deliver innovative and practical solutions, from concept through implementation and maintenance if required. Our depth and breadth of service and global reach equips us with resources to serve any client, anywhere in the world.</p>
+               <hr>
+            </div>
+            <!-- Blog Sidebar Widgets Column -->
+            <div class="col-md-4">
+               <!-- Blog Categories Well -->
+               <div class="well jumbotron padding-jumbotron">
+                  <h4>Quick Links</h4>
+                  <div class="row">
+                     <div class="col-lg-6">
+                        <ul class="list-unstyled">
+                           <li><a th:href="@{/home}">Home</a>
+                           </li>
+                           <li><a th:href="@{/aboutus}">About Us</a>
+                           </li>
+                           <li><a th:href="@{/contactus}">Contact Us</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <!-- /.row -->
+               </div>
+               <!-- Side Widget Well -->
+               <div class="well bgcolor-skyblue jumbotron padding-jumbotron">
+                  <h4>Our Guarantee</h4>
+                  <p>We build long-term, mutually beneficial partnerships with all of our clients. Only by having a thorough understanding of your needs and expectations along with an in-depth and specific knowledge of the capabilities possessed by our very deep pool of pre-qualified, hand-picked talent it is possible for us to consistently respond to your needs so rapidly and reliably.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div th:insert="fragments/common.html :: footerfiles"> </div>
+   </body>
+</html>

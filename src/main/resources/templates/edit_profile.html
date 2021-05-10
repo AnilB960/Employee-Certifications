@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Edit Profile</title>
+<th:block th:include="fragments/common.html :: headerfiles">
+</th:block>
+<link rel="stylesheet" th:href="@{../css/enroll.css}">
+<style>
+	.form-content {
+		padding: 3%;
+	}
+</style>
+</head>
+<body>
+	<header th:insert="fragments/common.html :: header"> </header>
+	 <div class="note">
+               <p>Edit Profile</p>
+            </div>
+	<form method="POST" th:object="${employee}" th:action="@{/home}">
+		<div class="form-content">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="username">Username</label> <input id="username"
+							type="text" class="form-control" th:field="*{username}" readonly />
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="firstname">First Name</label> 
+						<input id="firstname" type="text" class="form-control" th:field="*{firstName}" />
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="lastname">Last Name</label> 
+						<input id="lastname" type="text" class="form-control" th:field="*{lastName}" />
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="certificationstatus">Certification Status</label> 
+						<select id="certificationstatus" name="certificationstatus" class="form-control" required>
+						<option th:each="s : ${allStatus}" th:value="${s}" th:text="${s}" th:selected="${s == employee.certificationstatus}" > </option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="cdate">Certified Date</label> <input id="cdate"
+							type="date" class="form-control" th:field="*{certifieddate}" />
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="deadlione">Deadline</label> <input id="deadline"
+							type="date" class="form-control" th:field="*{deadline}" />
+					</div>
+				</div>
+			</div>
+			<button name="submit" type="submit" class="btnSubmit">Update</button>
+		</div>
+	</form>
+</body>
+</html>
